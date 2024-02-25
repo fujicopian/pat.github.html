@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home Page</title>
+    <style>
+        body {
+            background-image: url('https://www.ue.edu.ph/portals/common/img/ogp/uesocialogp.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: rgba(212, 212, 212, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logout-dropdown {
+            position: relative;
+        }
+
+        .logout-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        .logout-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .logout-dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .logout-dropdown:hover .logout-dropdown-content {
+            display: block;
+        }
+
+        h2 {
+            text-align: center;
+            color: #503e3e;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        button {
+            background-color: #E53935;
+            color: rgb(105, 90, 90);
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 90px;
+        }
+
+        button:hover {
+            background-color: #D32F2F;
+        }
+    </style>
+    <script src="userhome.js" defer></script>
+    <script src="logout.js" defer></script>
+    <script src="index.html"></script>
+</head>
+<body>
+    <div class="header">
+        <h2>Welcome, User!</h2>
+        <div class="logout-dropdown">
+            <button onclick="logout()">Logout</button>
+            <div class="logout-dropdown-content">
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- User-specific content container -->
+    <div id="userContent">
+        <p>This is the Lifesync user homepage content. You can add more content here.</p>
+    </div>
+    
+    <script src="logout.js" defer></script>
+</body>
+</html>
